@@ -16,6 +16,11 @@ class ChatController {
         headerAccessor.sessionAttributes!!["username"] = chatMessage.sender
         return chatMessage
     }
+    /**
+     * SimpleMessageHeaderAccessor.
+     *
+    A MessageHeaderAccessor to use when creating a Message from a decoded STOMP frame
+     * */
     @MessageMapping("/chat.send")
     @SendTo("/topic/public")
     fun sendMessage(@Payload chatMessage: ChatMessage):ChatMessage{

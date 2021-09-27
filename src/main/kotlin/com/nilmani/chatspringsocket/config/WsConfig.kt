@@ -9,9 +9,16 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 @Configuration
 @EnableWebSocketMessageBroker
 class WsConfig : WebSocketMessageBrokerConfigurer  {
+    /** WebSocket is configurable so we configure it */
+    /**
+     * . A contract for registering STOMP over WebSocket endpoints
+     * */
     override fun registerStompEndpoints(registry: StompEndpointRegistry) {
         registry.addEndpoint("/firstApp").withSockJS()
     }
+    /** withSockJs()
+     * Enable SockJS fallback options.
+     * */
 
     override fun configureMessageBroker(registry: MessageBrokerRegistry) {
         registry.enableSimpleBroker("/topic")
