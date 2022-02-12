@@ -19,8 +19,11 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-websocket")
 	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-reactor-netty
 	implementation("org.springframework.boot:spring-boot-starter-reactor-netty:2.5.5")
+	implementation("org.springframework.boot:spring-boot-starter-amqp")
 	// https://mvnrepository.com/artifact/org.webjars/webjars-locator-core
 	implementation("org.webjars:webjars-locator-core:0.48")
+	// https://mvnrepository.com/artifact/org.webjars/js-cookie
+	implementation("org.webjars:js-cookie:2.1.0")
 	// https://mvnrepository.com/artifact/org.webjars/sockjs-client
 	implementation("org.webjars:sockjs-client:1.5.1")
 	// https://mvnrepository.com/artifact/org.webjars/stomp-websocket
